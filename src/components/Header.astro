@@ -1,0 +1,25 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header
+  class="flex justify-center fixed w-full py-7 px-0 z-50 bg-[rgb(18,18,18)]"
+>
+  <div class="flex justify-between container items-center w-full px-7">
+    <div>
+      <svg width="40px" height="40px" viewBox="0 0 20 20" fill="white">
+        <path
+          fill="#ffff"
+          fill-rule="evenodd"
+          d="M18 5a1 1 0 100-2H2a1 1 0 000 2h16zm-8 4a1 1 0 100-2H2a1 1 0 100 2h8zm9 3a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-9 5a1 1 0 100-2H2a1 1 0 100 2h8z"
+        ></path>
+      </svg>
+    </div>
+    <div>
+      <div class="text-white font-bold">
+        <Logo />
+        <!-- <img class="h-32 w-32 fill-white" src="/public/Logo_2.svg" alt="logo" /> -->
+      </div>
+    </div>
+  </div>
+</header>

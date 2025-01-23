@@ -1,0 +1,90 @@
+---
+const programmingWords = [
+  "JavaScript",
+  "Python",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "Java",
+  "React",
+  "Vue",
+  "Angular",
+  "Node.js",
+  "PHP",
+  "Ruby",
+  "Swift",
+  "Kotlin",
+  "Rust",
+].join(" • ");
+---
+
+<section class="min-w-full">
+  <div class="bg-[rgb(18,18,18)] overflow-hidden flex flex-col justify-center">
+    <div class="relative flex flex-col gap-0 md:gap-12">
+      <!-- Gradient overlays -->
+      <div
+        class="absolute -left-0 top-0 w-[50%] h-full bg-gradient-to-r from-[rgb(18,18,18)] to-transparent z-10"
+      >
+      </div>
+      <div
+        class="absolute right-0 top-0 w-[50%] h-full bg-gradient-to-l from-[rgb(18,18,18)] to-transparent z-10"
+      >
+      </div>
+
+      <!-- Top marquee (right) -->
+      <div class="flex md:p-6 whitespace-nowrap animate-marquee-right">
+        <span
+          class="text-6xl md:text-9xl font-extrabold text-[rgb(224,241,31)] mx-4"
+          >{programmingWords}</span
+        >
+        <span
+          class="text-6xl md:text-9xl font-extrabold text-[rgb(224,241,31)] mx-4"
+          >{programmingWords}</span
+        >
+      </div>
+
+      <!-- Bottom marquee (left) -->
+      <div class="flex p-6 whitespace-nowrap animate-marquee-left">
+        <span
+          class="text-6xl md:text-9xl font-extrabold text-[rgb(224,241,31)] mx-4"
+          >{programmingWords}</span
+        >
+        <span
+          class="text-6xl md:text-9xl font-extrabold text-[rgb(224,241,31)] mx-4"
+          >{programmingWords}</span
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  span {
+    font-family: "Big Shoulders Display", serif;
+  }
+  @keyframes marquee-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-left {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-marquee-right {
+    animation: marquee-right 30s linear infinite;
+  }
+
+  .animate-marquee-left {
+    animation: marquee-left 30s linear infinite;
+  }
+</style>
