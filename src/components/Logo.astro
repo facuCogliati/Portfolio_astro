@@ -3,7 +3,18 @@
   width="100%"
   height="100%"
   viewBox="0 0 87 69"
-  ><path
+>
+  <!-- Trazo de fondo gris claro -->
+  <path
+    d="M 85 41.727 C 75.989 41.727 73.486 34.904 70.983 27.819 C 69.482 31.297 66.478 41.727 60.972 41.727 C 55.525 41.727 53.913 31.95 51.961 27.821 C 46.592 34.702 40.948 42.6 32.939 41.727 C 22.358 40.573 24.929 2 37.945 2 C 50.96 2 22.816 56.984 14.887 65.872 C 6.844 74.891 -5.763 27 8.407 21.863"
+    stroke="#f0f0f04d"
+    stroke-width="3"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    fill="transparent"></path>
+
+  <!-- Trazo animado principal -->
+  <path
     d="M 85 41.727 C 75.989 41.727 73.486 34.904 70.983 27.819 C 69.482 31.297 66.478 41.727 60.972 41.727 C 55.525 41.727 53.913 31.95 51.961 27.821 C 46.592 34.702 40.948 42.6 32.939 41.727 C 22.358 40.573 24.929 2 37.945 2 C 50.96 2 22.816 56.984 14.887 65.872 C 6.844 74.891 -5.763 27 8.407 21.863"
     stroke="#ffff"
     stroke-width="3"
@@ -13,26 +24,41 @@
     pathLength="1"
     stroke-dashoffset="0px"
     stroke-dasharray="0.1px 1px"
-    style="animation: draw 5s forwards infinite alternate;"></path></svg
->
+    style="animation: draw 5s forwards infinite alternate;"></path>
+</svg>
 
 <style>
   svg {
     width: 100px;
     height: auto;
+    animation: glow 5s forwards infinite alternate;
   }
+
   @keyframes draw {
     from {
       stroke-dasharray: 0px 1px;
+      stroke: #ffffff;
     }
     to {
       stroke-dasharray: 1px 1px;
+      stroke: #dff11e;
     }
   }
 
   @media (max-width: 768px) {
     svg {
       width: 60px;
+    }
+  }
+
+  @keyframes glow {
+    from {
+      fill: #ffffff;
+      filter: drop-shadow(0px 0px 10px #ffffff);
+    }
+    to {
+      fill: #dff11e;
+      filter: drop-shadow(5px 10px 20px #dff11e);
     }
   }
 </style>
