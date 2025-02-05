@@ -38,7 +38,7 @@ import Logo from "./Logo.astro";
 
       <div
         id="menu-list"
-        class="bg-[rgb(18,18,18)] w-96 absolute top-[4.3rem] md:top-20 md:left-0 -left-8 -z-10 p-5 md:pl-0 -translate-y-28 opacity-0"
+        class="bg-[rgb(18,18,18)] w-96 absolute top-[4.3rem] md:top-20 md:left-0 -left-8 -z-10 p-5 -translate-y-28 opacity-0 pointer-events-none rounded-sm border-[rgb(224,241,31)] border shadow-lg"
       >
         <ul class="flex flex-col gap-3 text-4xl font-bold tracking-wide">
           <li
@@ -101,6 +101,7 @@ import Logo from "./Logo.astro";
   const crossIcon = document.getElementById("cross-icon") as HTMLElement;
   const menuIcon = document.getElementById("menu-icon") as HTMLElement;
   menu.addEventListener("click", () => {
+    menuList.classList.toggle("pointer-events-none");
     menuList.classList.toggle("-translate-y-28");
     menuList.classList.toggle("opacity-0");
     menuList.classList.toggle("-z-10");
