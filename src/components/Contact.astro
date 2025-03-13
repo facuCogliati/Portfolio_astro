@@ -18,42 +18,96 @@
         </p>
 
         <div class="flex flex-col text-lg">
-          <span>San Francisco, CA, USA </span>
-          <span class="text-[rgb(224,241,31)]">lucas@email.com</span>
-          <span class="text-[rgb(224,241,31)]">+1 (555) 555-5555</span>
+          <span>Buenos Aires, ARG </span>
+          <span class="text-[rgb(224,241,31)]">facu.cogliati@email.com</span>
+          <span class="text-[rgb(224,241,31)]">+54 9 11 6497-3808</span>
         </div>
       </div>
       <div class="mt-7 md:mt-0">
-        <form class="space-y-4" action="">
+        <form
+          class="space-y-4"
+          action="https://formsubmit.co/facu.cogliati@gmail.com"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Contact Form Submission"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display: none" />
+          <input type="text" name="_honey" style="display: none" />
           <div class="flex flex-col md:flex-row gap-5">
             <input
               class="bg-[rgba(240,240,240,.1)] rounded-md px-3 py-4 text-sm"
               placeholder="Jane Smith"
               type="text"
-              name=""
+              name="fullname"
               id=""
             />
             <input
               class="bg-[rgba(240,240,240,.1)] rounded-md px-3 py-4 text-sm"
               placeholder="Jane.Smith@gmail.com"
               type="text"
-              name=""
-              id=""
+              name="email"
+              id="email"
             />
           </div>
           <textarea
             placeholder="Message..."
             class="w-full bg-[rgba(240,240,240,.1)] rounded-md px-2 py-4 resize-none h-40 text-sm"
-            name=""
+            name="Message"
             id=""></textarea>
+
           <div>
             <button
-              class="bg-[rgb(224,241,31)] font-semibold text-black rounded-md p-2 w-full"
+              id="form-btn"
+              class="bg-[rgb(224,241,31)] font-semibold text-black rounded-md p-2 w-full disabled:bg-[rgb(155,167,34)]"
               >SEND</button
             >
+          </div>
+          <div class="relative">
+            <p
+              class="text-red-500 absolute top-0 left-0 text-md"
+              id="error-message"
+            >
+            </p>
           </div>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const form = document.querySelector("form") as HTMLFormElement;
+  const formBtn = document.querySelector("#form-btn") as HTMLButtonElement;
+  const emailInput = document.querySelector("#email") as HTMLInputElement;
+  const errorMessage = document.querySelector(
+    "#error-message"
+  ) as HTMLParagraphElement;
+
+  if (form && formBtn) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!emailInput.value) {
+        errorMessage.innerText = "Please enter your email address";
+        emailInput.focus();
+        return;
+      }
+      errorMessage.innerText = "";
+      formBtn.innerText = "SENDING...";
+      formBtn.disabled = true;
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      formBtn.innerText = "SENT";
+      form.reset();
+    });
+  }
+</script>
