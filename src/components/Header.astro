@@ -41,37 +41,40 @@ import Logo from "./Logo.astro";
         class="bg-[rgb(18,18,18)] w-96 absolute top-[4.3rem] md:top-20 md:left-0 -left-8 -z-10 p-5 -translate-y-28 opacity-0 pointer-events-none rounded-sm border-[rgb(224,241,31)] border shadow-lg"
       >
         <ul class="flex flex-col gap-3 text-4xl font-bold tracking-wide">
-          <li
+          <a
+            href="#hero"
             class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
           >
             HOME
-          </li>
-          <li
+          </a>
+          <a
+            href="#about"
             class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
           >
             ABOUT
-          </li>
-          <li
-            class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
-          >
-            PROJECTS
-          </li>
-          <li
+          </a>
+          <a
+            href="#experience"
             class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
           >
             EXPERIENCE
-          </li>
-          <li
+          </a>
+          <a
+            href="#proyects"
+            class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
+          >
+            PROJECTS
+          </a>
+          <a
+            href="#education"
             class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
           >
             EDUCATION
-          </li>
-          <li
-            class="hover:text-[rgb(224,241,31)] cursor-pointer border-b-2 border-[rgb(224,241,31)] pb-2"
+          </a>
+
+          <a href="#contact" class="hover:text-[rgb(224,241,31)] cursor-pointer"
+            >CONTACT</a
           >
-            WRITTING
-          </li>
-          <li class="hover:text-[rgb(224,241,31)] cursor-pointer">CONTACT</li>
         </ul>
       </div>
     </div>
@@ -90,7 +93,7 @@ import Logo from "./Logo.astro";
       opacity 0.2s linear,
       transform 0.25s linear;
   }
-  li {
+  a {
     font-family: "Big Shoulders Display", serif;
   }
 </style>
