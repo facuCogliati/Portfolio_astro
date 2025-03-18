@@ -33,7 +33,9 @@ Welcome to my portfolio! This is a modern and visually appealing website, design
 ```
 
 ## 📸 Screenshot
-_Agrega aquí tu imagen de captura de pantalla dentro del .md_
+
+![localhost_4321_ (1)](https://github.com/user-attachments/assets/78f182c3-9d67-4b47-bc17-a71f268335c5)
+
 
 
 ## 🔗 Contact
