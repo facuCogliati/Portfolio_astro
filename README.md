@@ -39,7 +39,7 @@ Welcome to my portfolio! This is a modern and visually appealing website, design
 
 
 ## 🔗 Contact
-You can find me on **LinkedIn**: [Facu Cogliati](https://www.linkedin.com/in/facuCogliati)
+You can find me on **LinkedIn**: [Facu Cogliati](https://www.linkedin.com/in/facu-cogliati-fullstack)
 
 ---
 
